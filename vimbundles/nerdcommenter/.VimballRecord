@@ -1,0 +1,1 @@
+snippetsEmu.vba: call delete('/Users/michalkurek/.vimbundles/nerdcommenter/plugin/snippetsEmu.vim')|call delete('/Users/michalkurek/.vimbundles/nerdcommenter/doc/snippets_emu.txt')

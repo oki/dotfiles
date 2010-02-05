@@ -1,0 +1,32 @@
+# caption always "%`$USER%`@%H: %{+u bb} %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0< %= %c load:%l"
+
+# mirka
+# caption always "%{+u bb} %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0< %= %c load:%l"
+
+shell -bash
+
+# caption always "%{+u wb} %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+
+# kolorowe
+# caption always "%{wk}%H: [%{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}"
+
+# hardstatus string "[%{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}"
+altscreen on
+
+# caption always "%{= 11}%{+b w}Screen: %n | %h %=%t %c"
+# hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# caption always "%{= gk} - kolor status bara
+# %-Lw%{= yW} - kolor aktywnego taba
+# %50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
+caption always "%{= gk}%-Lw%{= yW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
+
+# konfig z trxeona
+# hardstatus on
+# hardstatus alwayslastline
+# hardstatus string '%{= KW}%-Lw%{= WK}%50>%n%f* %t%{= KW}%+Lw%< %{= KW}%-= %d %M %Y %c:%s%{-}'
+
+# caption always "%{+u wb} %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+defscrollback 1500
+
+# termcapinfo xterm* ti@:te@
