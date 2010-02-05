@@ -1,15 +1,45 @@
-. ~/.zsh/aliases
+# . ~/.zsh/aliases
 
 # changing directory to code project
-function c { cd ~/code/$1; }
+function c { cd ~/rails/$1; }
 
-# alternative to "rails" command to use templates
-function railsapp {
-  template=$1
-  appname=$2
-  shift 2
-  rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
+alias reload='. ~/.bash_profile'
+
+alias ls='ls --color'
+
+# alias s="cd ~/workspace/site_gen"
+
+alias cap1="`which cap` _1.4.1_"
+alias mr='mongrel_rails restart'
+
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff | mate'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gsvn='git-svn'
+alias gsvnd='git-svn dcommit'
+alias gsvnr='git-svn rebase'
+alias gsvnc='git commit -v && gsvnd'
+alias gsvnca='git commit -v -a && gsvnd'
+alias todo='rake notes:todo'
+
+alias rapid='~/rsget-mod.sh'
+alias v8='/Users/michalkurek/javascript/v8/shell'
+alias gems='cd /usr/local/lib/ruby/gems/1.8/gems'
+alias work='cd ~/work'
+alias sshl="grep -vE '^\s?#' ~/.ssh/config | grep Host | sed -e 's/^Host //'"
+
+alias rf='rake cucumber'
+# For running specific features.
+function rff {
+  rake cucumber FEATURE=features/"$1".feature
 }
 
-# misc
-alias reload='. ~/.bash_profile'
+# For running specific line numbers
+function rffl {
+  cucumber features/"$1".feature:"$2"
+}
