@@ -5,7 +5,7 @@ function c { cd ~/rails/$1; }
 
 alias reload='. ~/.bash_profile'
 
-alias ls='ls --color'
+alias ls='ls -G'
 
 # alias s="cd ~/workspace/site_gen"
 
