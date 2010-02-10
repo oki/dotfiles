@@ -27,7 +27,7 @@ alias gsvnc='git commit -v && gsvnd'
 alias gsvnca='git commit -v -a && gsvnd'
 alias todo='rake notes:todo'
 
-alias rapid='~/rsget-mod.sh'
+alias rapid='~/localbin/rsget-mod.sh'
 alias v8='/Users/michalkurek/javascript/v8/shell'
 alias gems='cd /usr/local/lib/ruby/gems/1.8/gems'
 alias work='cd ~/work'
@@ -43,3 +43,5 @@ function rff {
 function rffl {
   cucumber features/"$1".feature:"$2"
 }
+
+alias s='ssh'
