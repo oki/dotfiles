@@ -1,8 +1,18 @@
 # export EDITOR="mate -w"
 
-export PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch)\$(parse_svn_branch) \[\033[00m\]$\[\033[00m\] "
+export PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch)\$(parse_svn_branch) \[\033[00m\]\$\[\033[00m\] "
+
 export SUDO_PS1="\[\h:\w\] \u\\$ "
 export MANPATH=/opt/local/share/man:$MANPATH
+
+# Terminal colours (after installing GNU coreutils)
+NM="\[\033[0;38m\]" #means no background and white lines
+HI="\[\033[0;37m\]" #change this for letter colors
+HII="\[\033[0;31m\]" #change this for letter colors
+SI="\[\033[0;33m\]" #this is for the current directory
+IN="\[\033[0m\]"
+
+export PS1="$NM$HI\u $HII\h $SI\w \[\033[31m\]\$(parse_git_branch)\$(parse_svn_branch) $IN\[\033[00m\]\$\[\033[00m\] "
 
 export SVN_EDITOR="vim"
 export NNTPSERVER="news.onet.pl"
@@ -20,3 +30,5 @@ parse_svn_url() {
 parse_svn_repository_root() {
   svn info 2>/dev/null | grep -e '^Repository Root:*' | sed -e 's#^Repository Root: *\(.*\)#\1\/#g '
 }
+
+# echo -e "\033]0;$HOSTNAME\007"

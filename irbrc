@@ -33,7 +33,7 @@ end
 IRB.conf[:SAVE_HISTORY] = 10000
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:USE_READLINE] = true
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
+# IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 if Object.const_defined?(:Wirble)
