@@ -2,6 +2,7 @@
 
 # changing directory to code project
 function c { cd ~/rails/$1; }
+function h { cd ~/work/$1; }
 
 alias reload='. ~/.bash_profile'
 
