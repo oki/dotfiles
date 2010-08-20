@@ -17,3 +17,6 @@ if [ -f ~/.localrc ]; then
 fi
 
 
+PATH=/usr/local/magicwrap/bin:$PATH
+
+

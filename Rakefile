@@ -31,8 +31,9 @@ task :install do
 end
 
 def replace_file(file)
-  system %Q{rm "$HOME/.#{file.sub('.erb', '')}"}
-  link_file(file)
+    cmd = %Q{rm "$HOME/.#{file.sub('.erb', '')}"}; puts cmd
+    system cmd
+    link_file(file)
 end
 
 def link_file(file)
@@ -42,7 +43,8 @@ def link_file(file)
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   else
-    puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    puts "# linking ~/.#{file}"
+    cmd = %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}; puts cmd
+    system cmd
   end
 end
