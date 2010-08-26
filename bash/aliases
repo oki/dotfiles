@@ -7,11 +7,11 @@ function h { cd ~/work/$1; }
 alias reload='. ~/.bash_profile'
 
 
-if [ -x `which gnuls` ]; then
-    alias ls='gnuls --color'
-else
-    alias ls='ls -G'
-fi
+#   if [ -x `which gnuls` ]; then
+#       alias ls='gnuls --color'
+#   else
+#       alias ls='ls -G'
+#   fi
 
 
 # alias s="cd ~/workspace/site_gen"
