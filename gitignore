@@ -7,3 +7,4 @@ backups/*
 *.log
 *.swp
 *.sql
+**/capi/config/my_deploy.rb

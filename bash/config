@@ -40,4 +40,4 @@ parse_svn_repository_root() {
   svn info 2>/dev/null | grep -e '^Repository Root:*' | sed -e 's#^Repository Root: *\(.*\)#\1\/#g '
 }
 
-# echo -e "\033]0;$HOSTNAME\007"
+echo -e "\033]0;$HOSTNAME\007"
