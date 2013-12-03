@@ -109,9 +109,9 @@ set background=dark
 "set ts=3
 
 se expandtab
-se shiftwidth=4
-se softtabstop=4
-se tabstop=4
+se shiftwidth=2
+se softtabstop=2
+se tabstop=2
 
 " mapki
 map @# :! perl -wc %<CR>
@@ -129,7 +129,10 @@ autocmd BufEnter *.html,*.htm,*.js call Html()
 autocmd TabEnter *.html,*.htm,*.js call Html()
 
 autocmd BufEnter *.rb call RubyType()
-autocmd TabEnter *.rb call RubyType()
+"autocmd TabEnter *.rb call RubyType()
+
+"autocmd FileType ruby call FileType_Rails()
+
 
 "autocmd BufEnter *.html,*.htm,*.js emenu SnippetMagic.html
 
@@ -151,6 +154,11 @@ set dictionary=/home/oki/.vim/perlfun
 "
 function RubyType()
     map @@ :! ruby %<CR>
+endfunction
+
+function FileType_Rails()
+    "map @@ :! test -d app && (echo "execute rails runner" && rails runner %) \|\| (echo "execute ruby" && ruby -v && time ruby %)<CR>
+    map @@ :! test -d app && (echo "execute rails runner" && rails runner %)<CR>
 endfunction
 
 function PerlType()
@@ -303,7 +311,7 @@ set modelines=100
 "set nu
 au BufRead,BufNewFile COMMIT_EDITMSG setf git
 
-set termencoding=latin2
+set termencoding=utf8
 set fileencodings=utf8
 
 runtime! autoload/pathogen.vim
@@ -311,7 +319,18 @@ if exists('g:loaded_pathogen')
     call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
 end
 
+" PLUGIN fuzzyfinder 
+map <leader>f :FufFile **/<CR>
+map <leader>b :FufBuffer <CR>
 
+let g:fuf_enumeratingLimit = 20
+let g:fuf_file_exclude = '\v\.DS_Store|^\.git/$|\.swp|\.svn'
 
 "colorscheme vividchalk 
+
+cabbr js !js /Users/oki/.local/bin/js/runjslint.js "`cat %`" \| /Users/oki/.local/bin/js/format_lint_output.py
+
+
+
+
 
