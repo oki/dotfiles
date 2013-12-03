@@ -20,6 +20,7 @@ altscreen on
 # %-Lw%{= yW} - kolor aktywnego taba
 # %50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
 caption always "%{= gk}%-Lw%{= yW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
+caption always "%{= rk}%-Lw%{= yW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
 
 # konfig z trxeona
 # hardstatus on
@@ -30,3 +31,7 @@ caption always "%{= gk}%-Lw%{= yW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW}
 defscrollback 1500
 
 # termcapinfo xterm* ti@:te@
+
+# screen -t DUPA
+# screen -t foo
+# screen -t bar
