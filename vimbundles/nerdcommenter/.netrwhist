@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/oki/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/redis-rails-0.0.0/lib/redis-rails'

@@ -7,7 +7,7 @@ let et = g:snip_end_tag
 let cd = g:snip_elem_delim
 
 " moje snipety
-exec "Snippet rb #!/usr/local/bin/ruby<CR><CR>".st.et
+exec "Snippet rb #!/usr/bin/env ruby<CR><CR>".st.et
 exec "Snippet def def ".st."methodName".et."<CR><Tab>".st.et."<CR>end<CR>"
 exec "Snippet deft def test_".st."methodName".et."<CR><Tab>".st.et."<CR>end<CR>"
 exec "Snippet defi def initialize".st.et."<CR><Tab>".st.et."<CR>end<CR>"
